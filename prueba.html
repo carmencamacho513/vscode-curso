@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Prueba - Header Pop Art</title>
+	<style>
+		:root{
+			--bg:#0f0f13;
+			--pink:#ff2d95;
+			--cyan:#00f0ff;
+			--yellow:#ffd400;
+			--orange:#ff6a00;
+			--purple:#7b2cff;
+			--accent:#14ff7c;
+		}
+		*{box-sizing:border-box}
+		body{
+			margin:0; font-family: 'Helvetica Neue', Arial, sans-serif; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased;
+		}
+		/* Header pop art */
+		header{
+			position:relative; overflow:hidden;
+			padding:4rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:2rem;
+			background: radial-gradient(1200px 300px at 10% 20%, rgba(255,45,149,0.12), transparent 10%),
+									radial-gradient(1000px 300px at 90% 80%, rgba(0,240,255,0.08), transparent 10%),
+									linear-gradient(135deg, rgba(123,44,255,0.08), rgba(255,106,0,0.06));
+			border-bottom:8px solid var(--yellow);
+		}
+		.logo{
+			display:flex; align-items:center; gap:1rem;
+		}
+		.badge{
+			width:96px; height:96px; border-radius:12px; display:inline-grid; place-items:center;
+			background: conic-gradient(from 120deg, var(--pink), var(--orange), var(--yellow), var(--cyan), var(--purple));
+			box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 0 6px rgba(255,255,255,0.03) inset;
+			transform: rotate(-8deg);
+		}
+		.badge h1{font-size:1.6rem; margin:0; letter-spacing:0.6px; color:#081018; font-weight:900; text-transform:uppercase;
+			text-shadow: 0 2px 0 rgba(255,255,255,0.25);
+		}
+		.title{
+			max-width:780px;
+		}
+		.title h2{
+			margin:0; font-size:2.4rem; line-height:1.02; color:var(--yellow); font-weight:900; text-transform:uppercase;
+			letter-spacing:1px;
+			text-shadow: 6px 6px 0 rgba(0,0,0,0.25), -6px -6px 0 rgba(255,45,149,0.06);
+		}
+		.title p{
+			margin:.4rem 0 0; color:#e9eef7; opacity:0.95; font-weight:700;
+			text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+		}
+		nav{
+			display:flex; gap:1rem; align-items:center;
+		}
+		.btn{
+			padding:.6rem 1rem; border-radius:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.6px; cursor:pointer;
+			border:4px solid rgba(255,255,255,0.06); background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+			color:var(--pink); box-shadow: 0 8px 24px rgba(123,44,255,0.12), 0 3px 0 rgba(0,0,0,0.35) inset;
+		}
+		.cta{
+			background: linear-gradient(90deg,var(--accent),var(--cyan)); color:#061016; border:0; padding:.8rem 1.2rem; border-radius:14px; font-weight:900;
+			box-shadow: 0 10px 30px rgba(20,255,124,0.12), 0 2px 0 rgba(0,0,0,0.4) inset;
+		}
+		/* Decorative pop-art dots */
+		.dots{position:absolute; right:-120px; top:-40px; width:480px; height:480px; background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06) 2%, transparent 2.5%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.06) 2%, transparent 2.5%); opacity:0.6; transform:rotate(8deg); mix-blend-mode:screen}
+		/* Responsive */
+		@media (max-width:880px){
+			header{flex-direction:column; align-items:flex-start}
+			.logo{width:100%; justify-content:space-between}
+			.title h2{font-size:1.8rem}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<div class="badge"><h1>POP</h1></div>
+			<div class="title">
+				<h2>Estética Pop Art — Vibrante y Saturada</h2>
+				<p>Contrastes audaces, formas geométricas y energía visual elevada.</p>
+			</div>
+		</div>
+		<nav>
+			<button class="btn">Galería</button>
+			<button class="btn">Colección</button>
+			<button class="btn cta">Explorar</button>
+		</nav>
+		<div class="dots" aria-hidden="true"></div>
+	</header>
+
+	<main style="padding:2rem;color:#dfe9ff;">
+		<section>
+			<h3 style="margin-top:0;color:var(--pink);">Ejemplo</h3>
+			<p>Este encabezado usa una paleta vibrante y elementos inspirados en el pop art: degradados con alto contraste, tipografías pesadas y sombras duras.</p>
+		</section>
+	</main>
+</body>
+</html>
